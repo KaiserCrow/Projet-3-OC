@@ -29,6 +29,8 @@ const categoryInput = document.createElement("input");
 const submitButton = document.createElement("input");
 let allWorks = [];
 let loginLink = document.getElementById("login-link");
+const confirmationModal = document.getElementById("confirmationModal");
+const confirmationMessage = document.getElementById("confirmationMessage");
 
 addPhotoButton.textContent = "Ajouter une photo";
 addPhotoButton.id = "add-button";
@@ -287,6 +289,15 @@ function displayEditButton() {
   }
 }
 
+function showModalWithTimeout(message, duration) {
+  confirmationMessage.textContent = message;
+  confirmationModal.style.display = "block";
+
+  setTimeout(() => {
+    confirmationModal.style.display = "none";
+  }, duration);
+}
+
 function deleteImage(id, event) {
   event.stopPropagation();
   event.preventDefault();
@@ -301,9 +312,9 @@ function deleteImage(id, event) {
   })
     .then((response) => {
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        showModalWithTimeout(`Item Deleted, status: ${response.status}`, 3000);
       } else {
-        console.log("Item Deleted, status: ", response.status);
+        showModalWithTimeout(`Item Deleted, status: ${response.status}`, 3000);
       }
 
       const figure = galleryElt.querySelector(`[data-id="${id}"]`);
