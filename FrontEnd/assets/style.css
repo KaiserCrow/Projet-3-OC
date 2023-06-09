@@ -139,6 +139,44 @@ header {
   justify-content: space-between;
   margin: 50px 0;
 }
+
+#navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+}
+
+#nav-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+
+#navbar span {
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+#navbar button {
+  padding: 10px 20px;
+  border-radius: 60px;
+  font-family: Work Sans;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
 section {
   margin: 50px 0;
 }
@@ -220,6 +258,10 @@ li:hover {
   border: none;
 
   font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 
 #portfolio h2 button:hover {
@@ -227,6 +269,15 @@ li:hover {
   color: grey;
 }
 
+.button-text {
+  margin-left: 5px;
+  font-family: Work Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+}
 .filters {
   display: flex;
   justify-content: center;
@@ -300,15 +351,17 @@ li:hover {
   padding: 20px;
   border: 1px solid #888;
   width: 30%;
+  border-radius: 10px;
 }
 
 .modal-content h2 {
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 400;
+  font-family: Work Sans;
   font-size: 26px;
+  font-weight: 400;
   line-height: 30px;
+  letter-spacing: 0em;
   text-align: center;
+
   color: black;
   width: 100%;
 }
@@ -347,11 +400,13 @@ li:hover {
 }
 
 .suppression button {
-  font-family: "Syne";
-  font-style: normal;
-  font-weight: 400;
+  font-family: Syne;
   font-size: 14px;
+  font-weight: 400;
   line-height: 17px;
+  letter-spacing: 0em;
+  text-align: center;
+
   border: none;
   background-color: white;
   color: #d65353;
@@ -370,6 +425,12 @@ li:hover {
   color: white;
   background: #1d6154;
   border-radius: 60px;
+  font-family: Syne;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 
 #add-button:hover {
@@ -432,28 +493,47 @@ figure button {
 }
 
 #form input {
-  width: 60%;
+  width: 68%;
   line-height: 51px;
   font-size: 14px;
+  margin-top: 10px;
 }
 
 #form label {
-  width: 60%;
-  text-align: center;
+  width: 70%;
+  margin-top: 20px;
   font-size: 14px;
 }
 
+#imageLabel {
+  position: absolute;
+}
+
+#form #imageLabel {
+  margin-top: 100px;
+  text-align: center;
+}
+
 #category {
-  width: 60%;
+  width: 70%;
   height: 51px;
   font-size: 14px;
+  background-color: white;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  margin-top: 10px;
+  border: none;
+}
+
+#title {
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
 
 .fa-image {
   position: absolute;
-  margin-bottom: 100px;
+  margin-bottom: 90px;
   font-size: 58px;
-  color: grey;
+  color: #b9c5cc;
 }
 
 .fa-image:hover {
@@ -484,7 +564,6 @@ figure button {
 }
 
 #imageButtonJpg {
-  width: 173px;
   height: 36px;
   margin-top: 50px;
   border-radius: 50px;
@@ -494,26 +573,37 @@ figure button {
   align-items: center;
   background-color: #cbd6dc;
   position: absolute;
+  font-family: Work Sans;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #306685;
+  border-color: #cbd6dc;
+}
+
+#form #imageButtonJpg {
+  width: 173px;
 }
 
 #imageButtonJpg:hover {
   cursor: pointer;
-  background-color: #1d6154;
 }
 
-#imageLabel {
-  position: absolute;
-  margin-top: 115px;
-}
-
-input[type="submit"] {
+#form input[type="submit"] {
   font-family: "Syne";
   font-weight: 700;
   color: white;
   background-color: #1d6154;
   margin: 2em auto;
-  text-align: center;
   border-radius: 60px;
+  width: 237px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
 }
 
 input[type="submit"]:hover {
