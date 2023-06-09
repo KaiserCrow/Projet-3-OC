@@ -246,6 +246,16 @@ li:hover {
   margin-bottom: 0.5em;
 }
 
+#modifier {
+  margin-top: -40px;
+  margin-left: 55px;
+}
+
+#modifier button {
+  border: none;
+  background-color: white;
+}
+
 #portfolio h2 {
   justify-content: center;
   margin-bottom: 1em;

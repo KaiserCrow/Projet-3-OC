@@ -31,6 +31,7 @@ let allWorks = [];
 let loginLink = document.getElementById("login-link");
 const confirmationModal = document.getElementById("confirmationModal");
 const confirmationMessage = document.getElementById("confirmationMessage");
+const introElt = document.getElementById("modifier");
 
 addPhotoButton.textContent = "Ajouter une photo";
 addPhotoButton.id = "add-button";
@@ -101,6 +102,8 @@ closeButton.innerHTML = "&#10006;";
 closeButton.id = "closeButton";
 closeButton.classList.add("close");
 closeAndBack.appendChild(closeButton);
+
+introElt.appendChild(boutonModifier.cloneNode(true));
 
 addPhotoButton.addEventListener("click", showAddPhotoModal);
 addPhotoButton.addEventListener("click", (event) => {
